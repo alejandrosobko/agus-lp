@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <meta name="theme-color" content="#8b5cf6" />
+        <meta name="theme-color" content="#f5f5f5ff" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
       </head>
       <body className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable}`}>
