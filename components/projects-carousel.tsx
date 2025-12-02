@@ -12,7 +12,7 @@ const projects = [
     title: "Residencia Moderna Los Altos",
     location: "Los Altos, CA",
     date: "2024",
-    image: "/placeholder-1wkvh.png",
+    image: "/placeholder.png",
     description: "Casa unifamiliar de 350m² con diseño contemporáneo y tecnología domótica integrada.",
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     title: "Remodelación Villa Esperanza",
     location: "Guadalajara, MX",
     date: "2024",
-    image: "/placeholder-e9sda.png",
+    image: "/placeholder.png",
     description: "Renovación completa de casa colonial manteniendo elementos arquitectónicos originales.",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     title: "Edificio Corporativo TechHub",
     location: "Monterrey, MX",
     date: "2023",
-    image: "/placeholder-pobqq.png",
+    image: "/placeholder.png",
     description: "Torre de oficinas de 15 pisos con certificación LEED y espacios de trabajo colaborativo.",
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     title: "Conjunto Residencial Jardines",
     location: "Puebla, MX",
     date: "2024",
-    image: "/placeholder-qtip1.png",
+    image: "/placeholder.png",
     description: "Desarrollo habitacional de 25 casas con áreas verdes y amenidades comunitarias.",
   },
 ]
@@ -118,7 +118,7 @@ export function ProjectsCarousel() {
                     }}
                   >
                     <img
-                      src={project.image || "/placeholder.svg"}
+                      src={project.image || "/placeholder.png"}
                       alt={project.title}
                       className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -228,7 +228,7 @@ export function ProjectsCarousel() {
                 {/* Modal Image */}
                 <div className="relative max-w-full max-h-full" onClick={(e) => e.stopPropagation()}>
                   <img
-                    src={projects[modalIndex].image || "/placeholder.svg"}
+                    src={projects[modalIndex].image || "/placeholder.png"}
                     alt={projects[modalIndex].title}
                     className="max-w-full max-h-[90vh] object-contain rounded-lg"
                   />

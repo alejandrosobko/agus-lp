@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import { Navbar } from "@/components/navbar"
 import { ContactSection } from "@/components/contact-section"
-import { servicesData, getServiceBySlug } from "@/lib/services-data"
+import { Navbar } from "@/components/navbar"
+import { getServiceBySlug, servicesData } from "@/lib/services-data"
+import { ArrowLeft, CheckCircle2 } from "lucide-react"
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, CheckCircle2 } from "lucide-react"
+import { notFound } from "next/navigation"
 
 interface ServicePageProps {
   params: {
@@ -71,7 +71,7 @@ export default function ServicePage({ params }: ServicePageProps) {
 
       {/* Hero Section */}
       <section className="relative h-96 w-full overflow-hidden bg-gradient-to-b from-primary/20 to-background">
-        <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+        <Image src={service.image || "/placeholder.png"} alt={service.title} fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="mb-6 bg-primary/80 p-4 rounded-full">
@@ -126,7 +126,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             {/* Right Column - Image Gallery Placeholder */}
             <div className="flex flex-col gap-4">
               <div className="relative h-96 w-full overflow-hidden rounded-lg border border-border bg-muted">
-                <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                <Image src={service.image || "/placeholder.png"} alt={service.title} fill className="object-cover" />
               </div>
             </div>
           </div>

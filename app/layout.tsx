@@ -1,11 +1,10 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
+import type { Metadata } from "next"
+import type React from "react"
 import "./globals.css"
 
-// <CHANGE> Mejorados metadatos SEO para la homepage
 export const metadata: Metadata = {
   metadataBase: new URL("https://construccion-app.vercel.app"),
   title: {
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Construcción Profesional",
   },
   description:
-    "Empresa de construcción con servicios residenciales, comerciales, remodelaciones, acabados de lujo y construcción sostenible. Más de 20 años de experiencia.",
+    "Empresa de construcción con servicios residenciales, comerciales, remodelaciones, acabados de lujo y construcción general. Más de 20 años de experiencia.",
   keywords: [
     "construcción",
     "servicios de construcción",
@@ -27,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://construccion-app.vercel.app",
     siteName: "Construcción Profesional",
     title: "Servicios Profesionales de Construcción",
-    description: "Empresa de construcción especializada en proyectos residenciales, comerciales y sostenibles.",
+    description: "Empresa de construcción especializada en proyectos residenciales, comerciales y generales.",
     images: [
       {
         url: "/construccion-logo.jpg",

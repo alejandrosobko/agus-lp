@@ -25,7 +25,7 @@ export function ServicesSection() {
                 <Card className="group hover:shadow-lg transition-all duration-300 border-border bg-card overflow-hidden cursor-pointer h-full">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image || "/placeholder.png"}
                       alt={service.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
