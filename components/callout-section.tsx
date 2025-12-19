@@ -7,7 +7,7 @@ export function CalloutSection() {
             La calidad es nuestra forma de trabajo
           </h2>
           <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-            En ConstructPro, cada proyecto es una oportunidad de demostrar nuestro compromiso con la excelencia. Desde
+            En ConstruccionTotal, cada proyecto es una oportunidad de demostrar nuestro compromiso con la excelencia. Desde
             la planificación hasta la entrega, nos aseguramos de que cada detalle refleje la calidad que nos
             caracteriza.
           </p>

@@ -23,7 +23,7 @@ export function Navbar() {
           {/* Logo with Link to Home */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-              ConstructPro
+              ConstruccionTotal
             </Link>
           </div>
 
