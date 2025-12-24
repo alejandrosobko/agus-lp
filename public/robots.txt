@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.construcciontotal.com.ar/sitemap.xml
