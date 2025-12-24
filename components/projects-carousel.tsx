@@ -173,6 +173,7 @@ export function ProjectsCarousel() {
               size="icon"
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               onClick={prevSlide}
+              aria-label="prev-slide"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -182,6 +183,7 @@ export function ProjectsCarousel() {
               size="icon"
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               onClick={nextSlide}
+              aria-label="next-slide"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -198,6 +200,7 @@ export function ProjectsCarousel() {
                     ? "bg-primary"
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
+                aria-label={`go-to-slide-${index}`}
               />
             ))}
           </div>
@@ -219,6 +222,7 @@ export function ProjectsCarousel() {
                   size="icon"
                   className="absolute top-4 right-4 z-10 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
                   onClick={closeModal}
+                  aria-label="close-modal"
                 >
                   <X className="h-4 w-4" />
                 </Button>
@@ -232,6 +236,7 @@ export function ProjectsCarousel() {
                     e.stopPropagation()
                     prevModalSlide()
                   }}
+                  aria-label="prev-modal-slide"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </Button>
@@ -244,6 +249,7 @@ export function ProjectsCarousel() {
                     e.stopPropagation()
                     nextModalSlide()
                   }}
+                  aria-label="next-modal-slide"
                 >
                   <ChevronRight className="h-5 w-5" />
                 </Button>
@@ -296,6 +302,7 @@ export function ProjectsCarousel() {
                           ? "bg-white"
                           : "bg-white/40 hover:bg-white/60"
                       }`}
+                      aria-label={`go-to-modal-slide-${index}`}
                     />
                   ))}
                 </div>

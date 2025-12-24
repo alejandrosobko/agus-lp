@@ -218,6 +218,7 @@ export function ContactSection() {
                     type="submit"
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-3 group cursor-pointer "
                     disabled={submitting}
+                    aria-label="submit"
                   >
                     {submitting ? "Enviando..." : "Enviar Mensaje"}
                     <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

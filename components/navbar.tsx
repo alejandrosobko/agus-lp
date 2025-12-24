@@ -69,6 +69,7 @@ export function Navbar() {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground"
+              aria-label="toggle-menu"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />

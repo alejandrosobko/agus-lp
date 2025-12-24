@@ -56,6 +56,7 @@ export function Hero() {
               size="lg"
               onClick={scrollToContact}
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-3 group"
+              aria-label="go-to-contact"
             >
               Comenzar Proyecto
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform cursor-pointer" />
@@ -66,6 +67,7 @@ export function Hero() {
               variant="outline"
               onClick={scrollToServices}
               className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 py-3 backdrop-blur-sm cursor-pointer"
+              aria-label="go-to-services"
             >
               <Play className="mr-2 h-5 w-5" />
               Ver Proyectos
