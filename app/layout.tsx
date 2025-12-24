@@ -6,9 +6,10 @@ import type React from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://construccion-app.vercel.app"),
+  metadataBase: new URL("https://construcciontotal.com.ar"),
   title: {
-    default: "Servicios Profesionales de Construcción | Residencial y Comercial",
+    default:
+      "Servicios Profesionales de Construcción | Residencial y Comercial",
     template: "%s | Construcción Profesional",
   },
   description:
@@ -23,10 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://construccion-app.vercel.app",
+    url: "https://construcciontotal.com.ar",
     siteName: "Construcción Profesional",
     title: "Servicios Profesionales de Construcción",
-    description: "Empresa de construcción especializada en proyectos residenciales, comerciales y generales.",
+    description:
+      "Empresa de construcción especializada en proyectos residenciales, comerciales y generales.",
     images: [
       {
         url: "/construccion-logo.jpg",
@@ -39,13 +41,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Servicios Profesionales de Construcción",
-    description: "Construcción de calidad para tus proyectos residenciales y comerciales",
+    description:
+      "Construcción de calidad para tus proyectos residenciales y comerciales",
     images: ["/construccion-logo.jpg"],
   },
   alternates: {
-    canonical: "https://construccion-app.vercel.app",
+    canonical: "https://construcciontotal.com.ar",
     languages: {
-      es: "https://construccion-app.vercel.app",
+      es: "https://construcciontotal.com.ar",
     },
   },
 }
@@ -59,9 +62,14 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <meta name="theme-color" content="#f5f5f5ff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=yes"
+        />
       </head>
-      <body className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body
+        className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable}`}
+      >
         {children}
         <Analytics />
       </body>

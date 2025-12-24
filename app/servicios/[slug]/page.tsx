@@ -34,7 +34,7 @@ export async function generateMetadata({
       title: service.seoTitle,
       description: service.seoDescription,
       type: "website",
-      url: `https://construccion-app.vercel.app/servicios/${service.slug}`,
+      url: `https://construcciontotal.com.ar/servicios/${service.slug}`,
       images: [
         {
           url: service.image,
@@ -51,7 +51,7 @@ export async function generateMetadata({
       images: [service.image],
     },
     alternates: {
-      canonical: `https://construccion-app.vercel.app/servicios/${service.slug}`,
+      canonical: `https://construcciontotal.com.ar/servicios/${service.slug}`,
     },
   }
 }
