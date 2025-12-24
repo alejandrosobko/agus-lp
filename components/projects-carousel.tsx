@@ -8,9 +8,9 @@ import Image from "next/image"
 import { useState } from "react"
 import Image1 from "../public/assets/construccion/01.webp"
 import Image3 from "../public/assets/construccion/19.webp"
-import Image4 from "../public/assets/construccion/29.webp"
+import Image4 from "../public/assets/construccion/35.webp"
 import Image2 from "../public/assets/construccion/9.webp"
-import Image5 from "../public/assets/electricidad/10.webp"
+import Image5 from "../public/assets/electricidad/9.webp"
 
 const projects = [
   {
