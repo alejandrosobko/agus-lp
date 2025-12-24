@@ -2,50 +2,61 @@
 
 import type React from "react"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, MapPin, Calendar, X } from "lucide-react"
+import { Calendar, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react"
+import Image from "next/image"
+import { useState } from "react"
+import Image1 from "../public/assets/construccion/01.webp"
+import Image3 from "../public/assets/construccion/19.webp"
+import Image4 from "../public/assets/construccion/29.webp"
+import Image2 from "../public/assets/construccion/9.webp"
+import Image5 from "../public/assets/electricidad/10.webp"
 
 const projects = [
   {
     id: 1,
     title: "Residencia Moderna Los Altos",
     location: "Los Altos, CA",
-    date: "2024",
-    image: "/placeholder.png",
-    description: "Casa unifamiliar de 350m² con diseño contemporáneo y tecnología domótica integrada.",
+    date: "2025",
+    image: Image1.src,
+    description:
+      "Casa unifamiliar de 350m² con diseño contemporáneo y tecnología domótica integrada.",
   },
   {
     id: 2,
     title: "Centro Comercial Plaza Norte",
     location: "Ciudad de México",
-    date: "2023",
-    image: "/modern-commercial-building-with-glass-facade-and-r.jpg",
-    description: "Complejo comercial de 5,000m² con 50 locales comerciales y estacionamiento subterráneo.",
+    date: "2025",
+    image: Image2.src,
+    description:
+      "Complejo comercial de 5,000m² con 50 locales comerciales y estacionamiento subterráneo.",
   },
   {
     id: 3,
     title: "Remodelación Villa Esperanza",
     location: "Guadalajara, MX",
-    date: "2024",
-    image: "/placeholder.png",
-    description: "Renovación completa de casa colonial manteniendo elementos arquitectónicos originales.",
+    date: "2025",
+    image: Image3.src,
+    description:
+      "Renovación completa de casa colonial manteniendo elementos arquitectónicos originales.",
   },
   {
     id: 4,
     title: "Edificio Corporativo TechHub",
     location: "Monterrey, MX",
-    date: "2023",
-    image: "/placeholder.png",
-    description: "Torre de oficinas de 15 pisos con certificación LEED y espacios de trabajo colaborativo.",
+    date: "2025",
+    image: Image4.src,
+    description:
+      "Torre de oficinas de 15 pisos con certificación LEED y espacios de trabajo colaborativo.",
   },
   {
     id: 5,
     title: "Conjunto Residencial Jardines",
     location: "Puebla, MX",
-    date: "2024",
-    image: "/placeholder.png",
-    description: "Desarrollo habitacional de 25 casas con áreas verdes y amenidades comunitarias.",
+    date: "2025",
+    image: Image5.src,
+    description:
+      "Desarrollo habitacional de 25 casas con áreas verdes y amenidades comunitarias.",
   },
 ]
 
@@ -59,7 +70,9 @@ export function ProjectsCarousel() {
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    )
   }
 
   const goToSlide = (index: number) => {
@@ -80,7 +93,9 @@ export function ProjectsCarousel() {
   }
 
   const prevModalSlide = () => {
-    setModalIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length)
+    setModalIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    )
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -97,8 +112,8 @@ export function ProjectsCarousel() {
             Proyectos Recientes
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-            Explora algunos de nuestros proyectos más destacados que demuestran nuestro compromiso con la calidad y la
-            innovación.
+            Explora algunos de nuestros proyectos más destacados que demuestran
+            nuestro compromiso con la calidad y la innovación.
           </p>
         </div>
 
@@ -117,9 +132,11 @@ export function ProjectsCarousel() {
                       openModal(index)
                     }}
                   >
-                    <img
+                    <Image
                       src={project.image || "/placeholder.png"}
                       alt={project.title}
+                      width={400}
+                      height={600}
                       className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -127,8 +144,12 @@ export function ProjectsCarousel() {
                     {/* Project Info Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
                       <div className="max-w-2xl">
-                        <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-balance">{project.title}</h3>
-                        <p className="text-gray-200 mb-4 text-pretty leading-relaxed">{project.description}</p>
+                        <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-balance">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-200 mb-4 text-pretty leading-relaxed">
+                          {project.description}
+                        </p>
                         <div className="flex flex-wrap gap-4 text-sm">
                           <div className="flex items-center">
                             <MapPin className="h-4 w-4 mr-1" />
@@ -173,7 +194,9 @@ export function ProjectsCarousel() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-primary" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  index === currentIndex
+                    ? "bg-primary"
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
               />
             ))}
@@ -226,17 +249,26 @@ export function ProjectsCarousel() {
                 </Button>
 
                 {/* Modal Image */}
-                <div className="relative max-w-full max-h-full" onClick={(e) => e.stopPropagation()}>
-                  <img
+                <div
+                  className="relative max-w-full max-h-full"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Image
                     src={projects[modalIndex].image || "/placeholder.png"}
                     alt={projects[modalIndex].title}
+                    width={900}
+                    height={1200}
                     className="max-w-full max-h-[90vh] object-contain rounded-lg"
                   />
 
                   {/* Modal Project Info */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white rounded-b-lg">
-                    <h3 className="text-xl sm:text-2xl font-bold mb-2">{projects[modalIndex].title}</h3>
-                    <p className="text-gray-200 mb-3 text-sm sm:text-base">{projects[modalIndex].description}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                      {projects[modalIndex].title}
+                    </h3>
+                    <p className="text-gray-200 mb-3 text-sm sm:text-base">
+                      {projects[modalIndex].description}
+                    </p>
                     <div className="flex flex-wrap gap-4 text-sm">
                       <div className="flex items-center">
                         <MapPin className="h-4 w-4 mr-1" />
@@ -260,7 +292,9 @@ export function ProjectsCarousel() {
                         setModalIndex(index)
                       }}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        index === modalIndex ? "bg-white" : "bg-white/40 hover:bg-white/60"
+                        index === modalIndex
+                          ? "bg-white"
+                          : "bg-white/40 hover:bg-white/60"
                       }`}
                     />
                   ))}

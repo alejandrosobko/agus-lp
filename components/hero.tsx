@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
+import Image from "next/image"
+import HeroImage from "../public/hero-img.webp"
 
 export function Hero() {
   const scrollToContact = () => {
@@ -19,12 +21,16 @@ export function Hero() {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/construction-site.jpg"
+        <Image
+          src={HeroImage.src}
           alt="Sitio de construcción moderno"
+          fill
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -35,12 +41,14 @@ export function Hero() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
             Construcciones de{" "}
-            <span className="text-transparent bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text">Calidad</span>
+            <span className="text-transparent bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text">
+              Calidad
+            </span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto leading-relaxed">
-            Más de 15 años de experiencia en construcción residencial y comercial. Calidad garantizada, tiempos
-            cumplidos.
+            Más de 10 años de experiencia en construcción residencial y
+            comercial. Calidad garantizada, tiempos cumplidos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -71,7 +79,7 @@ export function Hero() {
               <div className="text-gray-300 text-sm">Proyectos Completados</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">15+</div>
+              <div className="text-3xl font-bold text-white mb-2">10+</div>
               <div className="text-gray-300 text-sm">Años de Experiencia</div>
             </div>
             <div className="text-center">
