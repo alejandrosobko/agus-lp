@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Empresa de construcción especializada en proyectos residenciales, comerciales y generales.",
     images: [
       {
-        url: "/construccion-logo.jpg",
+        url: "/assets/construccion/35.webp",
         width: 1200,
         height: 630,
         alt: "Servicios de Construcción Profesional",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Servicios Profesionales de Construcción",
     description:
       "Construcción de calidad para tus proyectos residenciales y comerciales",
-    images: ["/construccion-logo.jpg"],
+    images: ["/assets/construccion/35.webp"],
   },
   alternates: {
     canonical: "https://construcciontotal.com.ar",
